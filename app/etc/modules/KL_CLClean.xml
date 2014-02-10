@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KL_CLClean>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>0.0.1</version>
+        </KL_CLClean>
+    </modules>
+</config>

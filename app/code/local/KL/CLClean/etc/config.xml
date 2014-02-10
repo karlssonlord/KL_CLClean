@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KL_CLClean>
+            <version>0.0.1</version>
+        </KL_CLClean>
+    </modules>
+    <global>
+        <helpers>
+            <clclean>
+                <class>KL_CLClean_Helper</class>
+            </clclean>
+        </helpers>
+        <models>
+            <clclean>
+                <class>KL_CLClean_Model</class>
+                <resourceModel>clclean_mysql4</resourceModel>
+            </clclean>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <clclean_cleanchangelogtables>
+                <schedule>
+                    <cron_expr>15 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>clclean/cron::cleanChangeLogTables</model>
+                </run>
+            </clclean_cleanchangelogtables>
+        </jobs>
+    </crontab>
+</config> 
